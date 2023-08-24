@@ -1,0 +1,103 @@
+.foto {
+    margin: 119px 0px 0px 106px;
+    height:18pc; width: 15pc;
+    position: absolute;
+}
+
+.firma {
+    margin: 395px 0px 0px 630px;
+    height:5pc; width: 9pc;
+    position: absolute;
+}
+
+.credencial {
+    height:60pc; width: 60pc;/*1600ancho x 1256alto tamaño real imagen */
+    background-image: url('/imgs/Credencial.jpg' );
+    background-repeat: no-repeat;    
+    background-position: top center;        
+    background-size: contain;
+    position: relative;
+    left: 200px
+}
+
+.numero {
+    margin: 405px 0px 0px 860px;
+    position: absolute;
+}
+
+.nombre {
+    margin: 395px 0px 0px 20px;
+    position: absolute;
+}
+
+.categoria {
+    margin: 445px 0px 0px 20px;
+    position: absolute;
+}
+
+.departamento {
+    margin: 475px 0px 0px 20px;
+    position: absolute;
+}
+
+.direccion {
+    margin: 500px 0px 0px 20px;
+    position: absolute;
+}
+
+.labelencuesta {
+    font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13pt;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.inputencuesta {
+    font: 400 16px Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-variant-caps: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-variant-alternates: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+}
+body {
+    font-family: "Roboto", sans-serif, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.846153846;
+    color: #313335;
+    background-color: #ffffff;
+}
+.card {
+    position: relative;
+    margin-bottom: 24px;
+    background-color: #ffffff;
+    color: #333531;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+}
+
+.card-head {
+    position: relative;
+    line-height: 52px;
+    min-height: 56px;
+    vertical-align: middle;
+    border-radius: 2px 2px 0 0;
+}
+
+.card-body {
+    padding: 24px;
+    position: relative;
+}
+
+section .style-accent-bright, .offcanvas-pane .style-accent-bright, .card .style-accent-bright, section.style-accent-bright, .offcanvas-pane.style-accent-bright, .card.style-accent-bright {
+    background-color: #bf1b28;
+    border-color: #bf1b28;
+    color: #fff;
+}

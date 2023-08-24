@@ -1,0 +1,60 @@
+@page "/empleados/{empleadoId:int}"
+
+@inject IEmpleadoService empleadoService
+<link rel="stylesheet" href="/css/style.css" asp-append-version="true" />
+<h3>SERVIDOR PÚBLICO</h3>
+@if(@response.Success == false)
+{
+    <div class="alert alert-danger">
+        <h4>@response.Message</h4>
+
+    </div>
+}
+else
+{
+    @if (Model == null)
+    {
+        @* <LoadingMessage Message="Cargando Encuestas..." /> *@
+    }
+    else
+    {
+        <div class="credencial">
+            <br>
+            <!-- <img style="height:200; width: 163px;" src='../static/imgs/Fotos/{{empleado_plantilla.Clave}}.jpg'> -->
+            <img class="foto" src='../imgs/Fotos/@(Model.Id).jpg'>           
+            @* </br> *@
+            <br>
+            <img class="firma" src='../imgs/Fotos/@(Model.Id)Firma.jpg'>
+            @* </br> *@
+            <div class="numero">
+                <h2>@Model.Id</h2>
+            </div>    
+            <div class="nombre">
+                <h2>@Model.Nombre</h2>
+            </div>
+            <div class="categoria">
+                @Model.Categoria
+            </div>
+            <div class="departamento">
+                @Model.Departamento
+            </div>
+            <div class="direccion">
+                @Model.Direccion
+            </div>
+        </div>
+    }
+}
+@code {
+    [Parameter]
+    public int empleadoId { get; set; }    
+    private Empleado Model;
+   private Response<Empleado> response = new Response<Empleado> { Success = true };    
+    protected async override Task OnInitializedAsync()
+    {
+        response = await empleadoService.GetEmpleado(empleadoId);
+        if (response.Success)
+        {
+            Model = response.Data;
+        }
+    }
+}

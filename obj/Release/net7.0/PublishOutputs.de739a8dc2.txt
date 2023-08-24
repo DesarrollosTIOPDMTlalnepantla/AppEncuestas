@@ -1,0 +1,15 @@
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\AppEncuestas.exe
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\appsettings.json
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\AppEncuestas.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\AppEncuestas.deps.json
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\AppEncuestas.runtimeconfig.json
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\AppEncuestas.pdb
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\Blazored.FluentValidation.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\ChartJs.Blazor.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\FluentValidation.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\MailKit.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\MimeKit.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\NETCore.MailKit.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll
+D:\AppEncuestas\obj\Release\net7.0\PubTmp\Out\BouncyCastle.Crypto.dll

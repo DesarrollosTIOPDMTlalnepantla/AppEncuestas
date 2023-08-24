@@ -1,0 +1,14 @@
+D:\AppEncuestas\bin\Release\net7.0\publish\AppEncuestas.exe
+D:\AppEncuestas\bin\Release\net7.0\publish\appsettings.Development.json
+D:\AppEncuestas\bin\Release\net7.0\publish\appsettings.json
+D:\AppEncuestas\bin\Release\net7.0\publish\AppEncuestas.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\AppEncuestas.deps.json
+D:\AppEncuestas\bin\Release\net7.0\publish\AppEncuestas.runtimeconfig.json
+D:\AppEncuestas\bin\Release\net7.0\publish\AppEncuestas.pdb
+D:\AppEncuestas\bin\Release\net7.0\publish\Blazored.FluentValidation.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\FluentValidation.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\MailKit.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\MimeKit.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\NETCore.MailKit.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\Newtonsoft.Json.dll
+D:\AppEncuestas\bin\Release\net7.0\publish\BouncyCastle.Crypto.dll

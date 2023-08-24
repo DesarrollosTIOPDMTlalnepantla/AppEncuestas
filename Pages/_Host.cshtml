@@ -1,0 +1,60 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace AppEncuestas.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    @* <link href="https://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900" rel="stylesheet"
+        type="text/css">
+    <link href="css/Tlalnepantla/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/Tlalnepantla/materialadmin.css" rel="stylesheet" type="text/css">
+    <link href="css/Tlalnepantla/admin-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/Tlalnepantla/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/Tlalnepantla/material-design-iconic-font.min.css" rel="stylesheet" type="text/css">
+    <link href="css/Tlalnepantla/rickshaw.css" rel="stylesheet" type="text/css">   
+    <link href="css/Tlalnepantla/morris.core.css" rel="stylesheet" type="text/css">      *@
+    @* <script src="_content/ChartJs.Blazor.Fork/ChartJsInterop.js" type="text/javascript" language="javascript"></script> *@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+    @* <script src="~/chart.js"></script>     *@
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="AppEncuestas.styles.css" rel="stylesheet" />
+    @* <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">     *@
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />    
+    <script src="js/funciones.js"></script>
+</head>
+<body>
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>  
+</body>
+@* <script >
+        function checkSubmit() {
+        if (!enviando) {
+    		enviando= true;
+    		return true;
+        } else {
+            //Si llega hasta aca significa que pulsaron 2 veces el boton submit
+            alert("El formulario ya se esta enviando");
+            return false;
+        }
+</script> *@
+
+</html>

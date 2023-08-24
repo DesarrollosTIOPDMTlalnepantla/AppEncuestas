@@ -1,0 +1,14 @@
+D:\TramitesEnLinea\bin\Release\net7.0\publish\TramitesEnLinea.exe
+D:\TramitesEnLinea\bin\Release\net7.0\publish\appsettings.Development.json
+D:\TramitesEnLinea\bin\Release\net7.0\publish\appsettings.json
+D:\TramitesEnLinea\bin\Release\net7.0\publish\TramitesEnLinea.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\TramitesEnLinea.deps.json
+D:\TramitesEnLinea\bin\Release\net7.0\publish\TramitesEnLinea.runtimeconfig.json
+D:\TramitesEnLinea\bin\Release\net7.0\publish\TramitesEnLinea.pdb
+D:\TramitesEnLinea\bin\Release\net7.0\publish\Blazored.FluentValidation.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\FluentValidation.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\MailKit.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\MimeKit.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\NETCore.MailKit.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\Newtonsoft.Json.dll
+D:\TramitesEnLinea\bin\Release\net7.0\publish\BouncyCastle.Crypto.dll

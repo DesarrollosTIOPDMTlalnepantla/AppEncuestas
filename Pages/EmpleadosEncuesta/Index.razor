@@ -1,0 +1,55 @@
+﻿@page "/encuestas/empleados"
+@*@using BookStore_UI.Shared*@
+@inject IEmpleadoEncuestaService empleadoEncuestaService
+<h3>Index</h3>
+@if(response.Success == false)
+{
+    <div class="alert alert-danger">
+        <h4>@response.Message</h4>
+
+    </div>
+}
+else
+{
+    @if (Model == null)
+    {
+        <LoadingMessage Message="Cargando Empleados Encuestas..." />
+    }
+    else
+    {
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Zona</th>
+                    <th>Area</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var empleado in Model)
+                {
+                    <tr>
+                        <td>@empleado.Id</td>
+                        <td>@empleado.Nombre</td>
+                        <td>@empleado.Zona</td>
+                        <td>@empleado.Area</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+@code {
+    private List<EmpleadoEncuestaReadOnlyDTO> Model;
+    private Response<List<EmpleadoEncuestaReadOnlyDTO>> response = new Response<List<EmpleadoEncuestaReadOnlyDTO>> { Success = true };
+
+    protected async override Task OnInitializedAsync()
+    {
+        response = await empleadoEncuestaService.GetEmpleadosEncuesta();
+        if (response.Success)
+        {
+            Model = response.Data;
+        }
+    }
+}

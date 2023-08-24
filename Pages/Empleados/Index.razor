@@ -1,0 +1,59 @@
+@page "/empleados"
+@inject IEmpleadoService empleadoService
+<h3>Index XXXX</h3>
+@if(response.Success == false)
+{
+    <div class="alert alert-danger">
+        <h4>@response.Message</h4>
+
+    </div>
+}
+else
+{
+    @if (Model == null)
+    {
+        @* <LoadingMessage Message="Cargando Empleados ..." /> *@
+    }
+    else
+    {
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Departamento</th>
+                    <th>Dirección</th>
+                    <th>Foto</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var empleado in Model)
+                {
+                    <tr>
+                        <td>@empleado.Id</td>
+                        <td>@empleado.Nombre</td>
+                        <td>@empleado.Categoria</td>
+                        <td>@empleado.Departamento</td>
+                        <td>@empleado.Direccion</td>  
+                        <td>@empleado.Foto</td> 
+                        @* <td>@empleado.Firma</td>                                                                        *@
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+@code {
+    private List<EmpleadoReadOnlyDTO> Model;
+    private Response<List<EmpleadoReadOnlyDTO>> response = new Response<List<EmpleadoReadOnlyDTO>> { Success = true };
+
+    protected async override Task OnInitializedAsync()
+    {
+        response = await empleadoService.GetEmpleados();
+        if (response.Success)
+        {
+            Model = response.Data;
+        }
+    }
+}

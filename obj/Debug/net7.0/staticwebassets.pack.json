@@ -1,0 +1,165 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\AppEncuestas\\Pages\\Encuestas\\Crear.razor.js",
+      "PackagePath": "staticwebassets\\Pages\\Encuestas\\Crear.razor.js"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\AppEncuestas.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AppEncuestas.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\admin-theme.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\admin-theme.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\material-design-iconic-font.min.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\material-design-iconic-font.min.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\materialadmin.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\materialadmin.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\morris.core.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\morris.core.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\Tlalnepantla\\rickshaw.css",
+      "PackagePath": "staticwebassets\\css\\Tlalnepantla\\rickshaw.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Credencial.jpg",
+      "PackagePath": "staticwebassets\\imgs\\Credencial.jpg"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\13.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\13.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\14.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\14.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\28.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\28.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\34.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\34.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\39.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\39.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\51.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\51.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\52.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\52.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\54.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\54.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\57.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\57.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\imgs\\Fotos\\62.JPG",
+      "PackagePath": "staticwebassets\\imgs\\Fotos\\62.JPG"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\AppEncuestas\\wwwroot\\js\\funciones.js",
+      "PackagePath": "staticwebassets\\js\\funciones.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.AppEncuestas.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.AppEncuestas.props",
+      "PackagePath": "build\\AppEncuestas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.AppEncuestas.props",
+      "PackagePath": "buildMultiTargeting\\AppEncuestas.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.AppEncuestas.props",
+      "PackagePath": "buildTransitive\\AppEncuestas.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

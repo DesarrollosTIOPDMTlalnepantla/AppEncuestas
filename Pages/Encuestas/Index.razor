@@ -1,0 +1,168 @@
+@page "/encuestas/"
+@inject IEncuestaService encuestaService
+@inject IEmpleadoEncuestaService empleadoEncuestaService
+<h3>Index</h3>
+@if(response.Success == false)
+{
+    <div class="alert alert-danger">
+        <h4>@response.Message</h4>
+
+    </div>
+}
+else
+{
+    @if (Model == null)
+    {
+        <LoadingMessage Message="Cargando Encuestas..." />
+    }
+    else
+    {
+        <div class="form-inline" >
+            <label class="sr-only" for="nombre-filtro">Filtrar</label>
+            <label>
+            Desde:
+            <InputDate @bind-Value="desdeFecha" />
+        </label>
+            <label>
+            Hasta:
+            <InputDate @bind-Value="hastaFecha" />
+        </label>        
+            <button type="button" class="btn btn-primary mr-sm-2 mb-2"
+            @onclick="Filtrar">Filtrar</button>
+            <button type="button" class="btn btn-danger mb-2"
+            @onclick="Limpiar">Limpiar</button>            
+        </div>
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                    <th>Encuesta</th>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Email</th>
+                    <th>1-Tiempo de duración</th>
+                    <th>2-Información proporcionada</th>
+                    <th>3-Trato del personal</th>
+                    <th>4-Solución al trámite</th>
+                    <th>Ingresada</th>                    
+                    <th>Comentario</th>  
+                    <th>No.Empleado</th>                    
+                    <th>Nombre</th>       
+                    <th>Zona</th>                                                             
+                    <th>Unidad Administrativa</th>   
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var encuesta in Model)
+                {
+                    <tr>
+                        <td>@encuesta.Encuesta.Id</td>
+                        <td>@encuesta.Encuesta.Nombre</td>
+                        <td>@encuesta.Encuesta.Telefono</td>
+                        <td>@encuesta.Encuesta.Email</td>
+                        <td>@ValorCalifica(@encuesta.Encuesta.CalificaTiempo)</td>
+                        <td>@ValorCalifica(@encuesta.Encuesta.CalificaInformacion)</td>                       
+                        <td>@ValorCalifica(@encuesta.Encuesta.CalificaTrato)</td>                  
+                        <td>@ValorSolucionado(@encuesta.Encuesta.TramiteSolucionado)</td>
+                        <td>@encuesta.Encuesta.Ingresada</td>           
+                        <td>@encuesta.Encuesta.Comentario</td>                                     
+                        <td>@encuesta.Encuesta.EmpleadoEncuestaId</td>
+                        <td>@encuesta.EmpleadoEncuesta.Nombre</td>
+                        <td>@encuesta.EmpleadoEncuesta.Zona</td>                                       
+                        <td>@encuesta.EmpleadoEncuesta.Area</td>                                                               
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+}
+@code {
+    private List<EncuestaLista> Model=new List<EncuestaLista>();     
+    //private List<EncuestaReadOnlyDTO> Model;
+    private Response<List<EncuestaReadOnlyDTO>> response = new Response<List<EncuestaReadOnlyDTO>> { Success = true };
+    private Response<EmpleadoEncuesta> response2 = new Response<EmpleadoEncuesta> { Success = true };
+    private DateTime desdeFecha = new DateTime(2023, 1, 1);
+    private DateTime hastaFecha= DateTime.UtcNow;
+    protected async override Task OnInitializedAsync()
+    {
+        response = await encuestaService.GetEncuestas();
+        if (response.Success)
+        {
+            await LlenaLista();
+        }
+    }
+    private async Task LlenaLista() {
+        //Model = response.Data;
+        foreach (EncuestaReadOnlyDTO encuesta in response.Data)
+        {
+            EmpleadoEncuesta empleado=new EmpleadoEncuesta();
+            response2 = await empleadoEncuestaService.GetEmpleadoEncuesta(encuesta.EmpleadoEncuestaId);
+            if (response2.Success)
+            {
+                empleado=response2.Data;
+                EncuestaLista encuestaLista=new EncuestaLista();
+                encuestaLista.Encuesta=encuesta;
+                encuestaLista.EmpleadoEncuesta=empleado;
+                //Model.Add(new EncuestaLista { Encuesta=encuesta, EmpleadoEncuesta=empleado});
+                try
+                {
+                    // Agregar elemento a la lista
+                    if(encuesta.Ingresada>=desdeFecha && encuesta.Ingresada<=hastaFecha)
+                    {
+                        Model.Add(encuestaLista);     
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }                    
+            }
+        }
+    }
+    private async Task Filtrar()
+    {
+            Model.Clear();
+            await LlenaLista();
+    }
+    private async Task Limpiar()
+    {
+            Model.Clear();
+    }    
+    private string ValorCalifica(int califica)
+    {
+        var calificacion="";
+        switch (califica)
+        {
+            case 1:
+                calificacion="Excelente";
+                break;
+            case 2:
+                calificacion="Bueno";
+                break;
+            case 3:
+                calificacion="Malo";
+                break;        
+            default:
+                calificacion="Pesimo";
+                break;
+        }
+        return calificacion;
+    }
+    private string ValorSolucionado(int solucionado)
+    {
+        var respuesta="";
+        switch (solucionado)
+        {
+            case 0:
+                respuesta="NO";
+                break;
+            default:
+                respuesta="SI";
+                break;
+        }
+        return respuesta;
+    }        
+    public class EncuestaLista {
+        public EncuestaReadOnlyDTO? Encuesta { get; set; }
+        public EmpleadoEncuesta? EmpleadoEncuesta  { get; set; }
+    }
+}

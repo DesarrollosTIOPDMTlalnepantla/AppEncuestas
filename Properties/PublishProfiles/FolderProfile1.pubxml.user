@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>\\192.168.30.10\wwwroot\AppEncuestas</_PublishTargetUrl>
+    <History>False|2023-05-29T16:38:55.0889909Z;False|2023-05-29T10:35:30.2891794-06:00;False|2023-05-29T10:31:42.6117960-06:00;False|2023-05-29T10:24:38.3205658-06:00;False|2023-05-29T10:21:33.4466189-06:00;False|2023-05-29T10:19:41.4924003-06:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
