@@ -1,0 +1,189 @@
+﻿@page "/encuestas/crear/{empleadoEncuestaId:int}"
+@attribute [Authorize(Roles = "Administrator")]
+
+@inject IEncuestaService encuestaService
+@inject NavigationManager _navManager
+@inject IJSRuntime JS
+@using AppEncuestas.Validators
+
+@*(1)*@
+<link rel="stylesheet" href="/css/style.css" asp-append-version="true" />
+
+
+<a href="https://www.opdmtlalnepantla.gob.mx/wp-content/uploads/files/Aviso-de-Privacidad-Libro-de-Gobierno.pdf">Aviso de Privacidad Libro de Gobierno de Investigación</a>
+<br />
+<br />
+@* @if (!isSuccess)
+{
+    <ErrorMessage Message="Something Went Wrong With the Operation" />
+} *@
+
+
+<div class="card">
+    <div class="card-head style-accent-bright">
+        Encuesta de Satisfacción
+    </div>
+    <p>favor de llenar todos los campos</p>    
+    <div class="card-body">
+        @* <EditForm Model="Model" OnValidSubmit="ManejaCrearEncuesta" OnInvalidSubmit="VerValidador"> *@
+        <EditForm Model="Model" OnValidSubmit="ManejaCrearEncuesta" >
+        @*    <DataAnnotationsValidator />
+            <ValidationSummary />*@
+            @* <FluentValidator TValidator="EncuestaValidator" /> *@
+            <div class="md0UAd" aria-hidden="true" dir="auto">* Indica que la pregunta es obligatoria</div>
+            <div class="form-group">
+                <label for="nombre">Su Nombre(opcional):</label>
+                <InputText @bind-Value="Model.Nombre" class="form-control" id="nombre" placeholder="Su respuesta" />
+            </div>
+            <div class="form-group">
+                <label for="telefono">Su Teléfono (opcional):</label>
+                <InputText @bind-Value="Model.Telefono" class="form-control" id="telefono" placeholder="Su respuesta" />
+            </div>
+            <div class="form-group">
+                <label for="email">Su Correo electrónico (opcional):</label>
+                <InputText @bind-Value="Model.Email" class="form-control" id="email" placeholder="Su respuesta" />
+            </div>
+            <div class="form-group">
+                <label >¿Como considera el tiempo que duró su tramite?*</label>
+                <select @bind="@Model.CalificaTiempo" class="form-control" id="caltiempo">
+                    <option value=0 class="labelencuesta">--SELECCIONE CALIFICACIÓN PARA TIEMPO</option>                    
+                    <option value=1 class="labelencuesta">Excelente</option>
+                    <option value=2 class="labelencuesta">Bueno</option>
+                    <option value=3 class="labelencuesta">Malo</option>
+                    <option value=4 class="labelencuesta">Pesimo</option>
+                </select>
+                @* <ValidationMessage For="@(() => Model.CalificaTiempo)" /> *@
+            </div>
+            <div class="form-group">
+                <label>¿Como califica la información proporcionada por el servidor público?*</label>
+                <select @bind="@Model.CalificaInformacion" class="form-control" id="calinformacion">
+                    <option value=0 class="labelencuesta">--SELECCIONE CALIFICACIÓN PARA INFORMACIÓN</option>     
+                    <option value=1 class="labelencuesta">Excelente</option>
+                    <option value=2 class="labelencuesta">Bueno</option>
+                    <option value=3 class="labelencuesta">Malo</option>
+                    <option value=4 class="labelencuesta">Pesimo</option>
+                </select>
+                @* <ValidationMessage For="@(() => Model.CalificaInformacion)" />         *@
+            </div>
+            <div class="form-group">
+                <label>¿Como considera el trato del personal que le atendió?*</label>
+                <select @bind="@Model.CalificaTrato" class="form-control" id="caltrato">
+                    <option value=0 class="labelencuesta">--SELECCIONE CALIFICACIÓN PARA TRATO</option>                         
+                    <option value=1 class="labelencuesta">Excelente</option>
+                    <option value=2 class="labelencuesta">Bueno</option>
+                    <option value=3 class="labelencuesta">Malo</option>
+                    <option value=4 class="labelencuesta">Pesimo</option>
+                </select>
+                @* <ValidationMessage For="@(() => Model.CalificaTrato)" />         *@
+            </div>
+            <div class="form-group">
+                <label>¿Le dieron solución a su tramite?*</label><br />
+                @* <label>
+                    <input type="radio" id="html" name="tramite_solucionado" value="true" class="labelencuesta">SI
+                </label>
+                <label>
+                    <input type="radio" id="html" name="tramite_solucionado" value="false" class="labelencuesta">NO
+                </label> *@
+                @* <p>Selected gender: @gender</p> *@
+                <div class="form-check">
+                    <InputRadioGroup @bind-Value="Model.TramiteSolucionado">
+                        <InputRadio Value="true" /> Si
+                        <InputRadio Value="false" /> No
+                    </InputRadioGroup>
+                @* <ValidationMessage For="@(() => Model.TramiteSolucionado)" />                         *@
+                </div>        
+                <div class="form-group">
+                    <label for="comentario">Comentarios(opcional):</label>
+                    <InputTextArea @bind-Value="Model.Comentario" class="form-control" id="comentario" placeholder="Su respuesta" />
+                </div>                
+                @* <ValidationMessage For="@(() => Model.TramiteSolucionado)" />         *@
+            </div>
+            <button id="boton" class="btn btn-primary" type="submit">
+                <span class="oi oi-pencil"></span>
+                Enviar
+            </button>          
+        </EditForm>
+    </div>        
+</div>
+@code{
+    @* private IJSObjectReference? module;     *@
+    [Parameter]
+    public int empleadoEncuestaId { get; set; }
+    //private EncuestaCrearDTO Model = new EncuestaCrearDTO() { Nombre="Su respuesta", Telefono="Su respuesta",Email="Su respuesta",Comentario="Su respuesta"};
+    private EncuestaCrearDTO Model = new EncuestaCrearDTO();
+
+@*     protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>("./Pages/Encuestas/Crear.razor.js");
+        }
+    } *@
+    private IJSObjectReference? jsModule;
+    protected override async Task OnAfterRenderAsync(bool firstRender) {
+        if (firstRender)
+        {
+            jsModule = await JS.InvokeAsync<IJSObjectReference>("import", "./script/CWriter.js");
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }    
+    private async Task ManejaCrearEncuesta()
+    {
+        @* await JS.InvokeAsync<string>("deshabilitarBoton()",""); *@
+        jsModule = await JS.InvokeAsync<IJSObjectReference>("deshabilitarBoton()");            
+
+        if (Model.Nombre=="" || Model.Nombre==null) {
+            Model.Nombre="Sin respuesta";
+        }
+
+        if (Model.Telefono=="" || Model.Telefono==null) {
+            Model.Telefono="Sin respuesta";
+        }        
+
+        if (Model.Email=="" || Model.Email==null) {
+            Model.Email="Sin respuesta";
+        }        
+
+        if (Model.Comentario=="" || Model.Comentario==null) {
+            Model.Comentario="Sin respuesta";
+        }        
+
+        @* var validar=VerValidador(); *@
+        var validator = new EncuestaValidator();
+        var result = validator.Validate(Model);
+
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+        }        
+        Model.EmpleadoEncuestaId = empleadoEncuestaId;
+        var response = await encuestaService.CreateEncuesta(Model);
+
+        if (response.Success)
+        {
+            BackToList();
+        }
+    }
+    private FluentValidation.Results.ValidationResult VerValidador()
+    {
+        // En algún lugar en tu código...
+        var validator = new EncuestaValidator();
+        var result = validator.Validate(Model);
+
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+        }
+        return result;
+    }
+    private void BackToList()
+    {
+        _navManager.NavigateTo("/encuestas/crearterminar");
+    }
+}
