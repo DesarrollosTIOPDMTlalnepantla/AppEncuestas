@@ -112,25 +112,9 @@
     //private EncuestaCrearDTO Model = new EncuestaCrearDTO() { Nombre="Su respuesta", Telefono="Su respuesta",Email="Su respuesta",Comentario="Su respuesta"};
     private EncuestaCrearDTO Model = new EncuestaCrearDTO();
 
-@*     protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            module = await JS.InvokeAsync<IJSObjectReference>("./Pages/Encuestas/Crear.razor.js");
-        }
-    } *@
-    private IJSObjectReference? jsModule;
-    protected override async Task OnAfterRenderAsync(bool firstRender) {
-        if (firstRender)
-        {
-            jsModule = await JS.InvokeAsync<IJSObjectReference>("import", "./script/CWriter.js");
-        }
-        await base.OnAfterRenderAsync(firstRender);
-    }    
     private async Task ManejaCrearEncuesta()
     {
-        @* await JS.InvokeAsync<string>("deshabilitarBoton()",""); *@
-        jsModule = await JS.InvokeAsync<IJSObjectReference>("deshabilitarBoton()");            
+        await JS.InvokeVoidAsync("deshabilitarBoton");            
 
         if (Model.Nombre=="" || Model.Nombre==null) {
             Model.Nombre="Sin respuesta";
@@ -161,6 +145,8 @@
         }        
         Model.EmpleadoEncuestaId = empleadoEncuestaId;
         var response = await encuestaService.CreateEncuesta(Model);
+
+        await Task.Delay(10000);
 
         if (response.Success)
         {
