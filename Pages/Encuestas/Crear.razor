@@ -2,6 +2,7 @@
 @attribute [Authorize(Roles = "Administrator")]
 
 @inject IEncuestaService encuestaService
+@inject ViewOptionService ViewOption
 @inject NavigationManager _navManager
 @inject IJSRuntime JS
 @using AppEncuestas.Validators
@@ -106,12 +107,19 @@
     </div>        
 </div>
 @code{
-    @* private IJSObjectReference? module;     *@
     [Parameter]
     public int empleadoEncuestaId { get; set; }
-    //private EncuestaCrearDTO Model = new EncuestaCrearDTO() { Nombre="Su respuesta", Telefono="Su respuesta",Email="Su respuesta",Comentario="Su respuesta"};
     private EncuestaCrearDTO Model = new EncuestaCrearDTO();
+    protected override void OnInitialized()
+    {
+        @* _navManager.LocationChanged += HandleLocationChanged; *@
+        ViewOption.Toggle();
+    }
 
+    private void HandleLocationChanged(object sender, LocationChangedEventArgs e)
+    {
+        ViewOption.Toggle();
+    }    
     private async Task ManejaCrearEncuesta()
     {
         await JS.InvokeVoidAsync("deshabilitarBoton");            

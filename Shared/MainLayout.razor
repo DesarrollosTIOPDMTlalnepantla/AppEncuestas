@@ -1,10 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
+@inject ViewOptionService ViewOption
+
 <div class="page">
 
-@*    <div class="sidebar">
+   <div class="sidebar @ViewOption.NavBarClass">
         <NavMenu />
-    </div>   *@
+    </div>  
     <main>
         <div class="top-row">
             <div class="col-4">

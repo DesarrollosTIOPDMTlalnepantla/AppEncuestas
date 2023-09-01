@@ -9,109 +9,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AppEncuestas
 build_property.RootNamespace = AppEncuestas
-build_property.ProjectDir = d:\AppEncuestas\
+build_property.ProjectDir = D:\AppEncuestas\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\AppEncuestas
+build_property.MSBuildProjectDirectory = D:\AppEncuestas
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/AppEncuestas/App.razor]
+[D:/AppEncuestas/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Index.razor]
+[D:/AppEncuestas/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = SW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Chart.razor]
+[D:/AppEncuestas/Pages/Chart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhcnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Counter.razor]
+[D:/AppEncuestas/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/CustomerPage.razor]
+[D:/AppEncuestas/Pages/CustomerPage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJQYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/EmpleadosEncuesta/Index.razor]
+[D:/AppEncuestas/Pages/EmpleadosEncuesta/Crear.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zRW5jdWVzdGFcQ3JlYXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/AppEncuestas/Pages/EmpleadosEncuesta/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zRW5jdWVzdGFcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Empleados/Credencial.razor]
+[D:/AppEncuestas/Pages/Empleados/Credencial.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXENyZWRlbmNpYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Empleados/Index.razor]
+[D:/AppEncuestas/Pages/Empleados/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbGVhZG9zXEluZGV4LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/EnConstruccion.razor]
+[D:/AppEncuestas/Pages/EnConstruccion.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5Db25zdHJ1Y2Npb24ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Encuestas/Crear.razor]
+[D:/AppEncuestas/Pages/Encuestas/Crear.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5jdWVzdGFzXENyZWFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Encuestas/Index.razor]
+[D:/AppEncuestas/Pages/Encuestas/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5jdWVzdGFzXEluZGV4LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Encuestas/Resultados.razor]
+[D:/AppEncuestas/Pages/Encuestas/Resultados.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5jdWVzdGFzXFJlc3VsdGFkb3MucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Encuestas/Terminar.razor]
+[D:/AppEncuestas/Pages/Encuestas/Terminar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW5jdWVzdGFzXFRlcm1pbmFyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/FetchData.razor]
+[D:/AppEncuestas/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/File-upload-1.razor]
+[D:/AppEncuestas/Pages/File-upload-1.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmlsZS11cGxvYWQtMS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/FormExample1.razor]
+[D:/AppEncuestas/Pages/FormExample1.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybUV4YW1wbGUxLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/FormExample2.razor]
+[D:/AppEncuestas/Pages/FormExample2.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybUV4YW1wbGUyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/FormExample5.razor]
+[D:/AppEncuestas/Pages/FormExample5.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybUV4YW1wbGU1LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/Index.razor]
+[D:/AppEncuestas/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Shared/SurveyPrompt.razor]
+[D:/AppEncuestas/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/_Imports.razor]
+[D:/AppEncuestas/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Shared/MainLayout.razor]
+[D:/AppEncuestas/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-wp8gl1f8qs
 
-[d:/AppEncuestas/Shared/NavMenu.razor]
+[D:/AppEncuestas/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-w4nfk5khn6
 
-[d:/AppEncuestas/Pages/Error.cshtml]
+[D:/AppEncuestas/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/AppEncuestas/Pages/_Host.cshtml]
+[D:/AppEncuestas/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

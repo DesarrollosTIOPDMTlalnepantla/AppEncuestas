@@ -32,6 +32,9 @@ builder.Services.Configure<SmtpSettings>(
 
 builder.Services.AddSingleton<IEmailSenderService, EmailSenderService>();
 
+    //Add next line to register
+    builder.Services.AddSingleton<ViewOptionService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

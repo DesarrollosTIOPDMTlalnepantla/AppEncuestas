@@ -1,7 +1,7 @@
 ﻿@page "/encuestas/empleados"
 @*@using BookStore_UI.Shared*@
 @inject IEmpleadoEncuestaService empleadoEncuestaService
-<h3>Index</h3>
+<h3>Empleados Encuesta</h3>
 @if(response.Success == false)
 {
     <div class="alert alert-danger">
@@ -17,6 +17,7 @@ else
     }
     else
     {
+        <a class="btn btn-dark" href="/encuestas/empleados/crear"><span class="oi oi-plus" aria-hidden="true"></span> Nuevo Empleado</a>
         <table class="table table-responsive">
             <thead>
                 <tr>

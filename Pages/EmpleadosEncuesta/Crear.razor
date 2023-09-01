@@ -1,0 +1,78 @@
+﻿@page "/encuestas/empleados/crear"
+@inject IEmpleadoEncuestaService empleadoEncuestaService
+@inject NavigationManager _navManager
+
+@using AppEncuestas.Validators
+
+<h3>Crear Nuevo Empleado Encuesta</h3>
+<EditForm Model="Model" OnValidSubmit="ManejarCrearEmpleadoEncuesta">
+    @* <FluentValidator TValidator="EmpleadoEncuestaValidator" /> *@
+    <div class="form-group">
+        <label for="id">Número Empleado:</label>
+        <InputNumber @bind-Value="Model.Id" class="form-control" id="id" placeholder="Su respuesta" />
+    </div>    
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <InputText @bind-Value="Model.Nombre" class="form-control" id="nombre" placeholder="Su respuesta" />
+    </div>
+    <div class="form-group">
+        <label for="zona">Zona:</label>
+        <InputText @bind-Value="Model.Zona" class="form-control" id="zona" placeholder="Su respuesta" />
+    </div>
+    <div class="form-group">
+        <label for="area">Area:</label>
+        <InputText @bind-Value="Model.Area" class="form-control" id="area" placeholder="Su respuesta" />
+    </div>
+    <button id="boton" class="btn btn-primary" type="submit">
+        <span class="oi oi-pencil"></span>
+        Crear
+    </button>         
+    <button @onclick="BackToList" class="btn btn-outline-secondary" type="submit">
+        <span class="oi oi-media-skip-backguard"></span>
+        Lista        
+    </button>       
+
+</EditForm>
+@code {
+    private EmpleadoEncuestaCrearDTO Model=new EmpleadoEncuestaCrearDTO();
+
+    private async Task ManejarCrearEmpleadoEncuesta()
+    {
+@*         var validator = new EmpleadoEncuestaValidator();
+        var result = validator.Validate(Model);
+
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+        }     *@    
+
+        var response = await empleadoEncuestaService.CreateEmpleadoEncuesta(Model);
+
+        if (response.Success)
+        {
+            BackToList();
+        }
+    }
+    private FluentValidation.Results.ValidationResult VerValidador()
+    {
+        // En algún lugar en tu código...
+        var validator = new EmpleadoEncuestaValidator();
+        var result = validator.Validate(Model);
+
+        if (!result.IsValid)
+        {
+            foreach (var error in result.Errors)
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
+        }
+        return result;
+    }    
+    private void BackToList()
+    {
+        _navManager.NavigateTo("/encuestas/empleados");
+    }    
+}
